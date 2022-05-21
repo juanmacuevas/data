@@ -2,7 +2,8 @@ import requests
 import json
 import datetime 
 import locale
-locale.setlocale(locale.LC_ALL,'es_ES.UTF-8')
+#locale.setlocale(locale.LC_ALL,'es_ES.UTF-8')
+locale.setlocale(locale.LC_TIME,'es_ES')
 requests.packages.urllib3.disable_warnings()
 
 headers = {'Referer': 'https://app.bookitit.com/es/hosteds/widgetdefault/2c6277fc2bf43562ccce5c647ff1db4eb'}

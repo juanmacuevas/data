@@ -85,7 +85,7 @@ def get_next_available(servicio):
     return availables
 
 def format_date(date):
-    return datetime.datetime.strptime(date,'%Y-%m-%d').strftime('*%A, %-d* de %B')
+    return datetime.datetime.strptime(date,'%Y-%m-%d').strftime('%A, *%-d de %B*')
 
 # SERVICIOS 
 # REAL REQUEST
@@ -210,7 +210,7 @@ def main():
     
     data = load_state()
     token = data['token']
-    servicios = [['bkt144496','bkt70279','Inscripción y Pasaporte (_B_)'],['bkt144463','bkt70312','Pasaporte y Otros (_A_)'],['bkt144474','bkt70312','NIE ']]
+    servicios = [['bkt144496','bkt70279','Inscripción y Pasaporte _(B)_'],['bkt144463','bkt70312','Pasaporte y Otros _(A)_'],['bkt144474','bkt70312','NIE']]
     new_text = '\n\n'.join(fetch_citas(servicios))
     if new_text != data.get('last_message',''):
         telegram_sendMessage(token,data['chat_id'],new_text)

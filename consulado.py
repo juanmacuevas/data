@@ -6,7 +6,7 @@ import locale
 locale.setlocale(locale.LC_TIME,'es_ES')
 requests.packages.urllib3.disable_warnings()
 
-headers = {'Referer': 'https://app.bookitit.com/es/hosteds/widgetdefault/2c6277fc2bf43562ccce5c647ff1db4eb'}
+headers = {'Referer': 'https://www.citaconsular.es/'}
 
 # def get_services():
 #     params = {
@@ -47,12 +47,12 @@ def get_dates(servicio,agenda,month):
         'lang': 'es',
         'services[]': servicio,
         'agendas[]': agenda,
-        'src': 'https://app.bookitit.com/es/hosteds/widgetdefault/2c6277fc2bf43562ccce5c647ff1db4eb',
+        'src': 'https://www.citaconsular.es/es/hosteds/widgetdefault/2c6277fc2bf43562ccce5c647ff1db4eb',
         'start': month,
         'end': month,
     }
 
-    res = requests.get('https://app.bookitit.com/onlinebookings/datetime/', params=params, headers=headers,verify=False).content.decode()
+    res = requests.get('https://www.citaconsular.es/onlinebookings/datetime/', params=params, headers=headers,verify=False).content.decode()
     a,b=res.find('{'),res.rfind('}')+1
     j=json.loads(res[a:b])
     # print('req',month)

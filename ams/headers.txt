@@ -1,7 +1,0 @@
-HTTP/2 302 
-server: nginx
-date: Tue, 13 Sep 2022 22:40:01 GMT
-content-type: text/html; charset=iso-8859-1
-location: https://www.exteriores.gob.es/es/Paginas/index.aspx
-x-powered-by: PleskLin
-
